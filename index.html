@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ian Anci | Computer Science Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Usaremos 'Space Grotesk' para los títulos (toque tecnológico) y 'Inter' para lectura -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #fdfdfd;
+            --text-color: #0a0a0a;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* Animación de entrada suave */
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Efecto de ruido sutil para textura (opcional pero le da un toque premium) */
+        .noise-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="selection:bg-black selection:text-white">
+    <div class="noise-bg"></div>
+
+    <main class="max-w-5xl mx-auto px-6 py-16 md:py-24">
+        
+        <header class="mb-24 fade-in-up">
+            <div class="flex flex-col md:flex-row md:items-end justify-between border-b-2 border-black pb-8 mb-8 gap-6">
+                <div>
+                    <p class="uppercase tracking-[0.2em] text-sm font-semibold mb-4">Portafolio / 2026</p>
+                    <h1 class="text-6xl md:text-8xl font-bold tracking-tighter uppercase leading-none">Ian Anci</h1>
+                </div>
+                <div class="md:text-right">
+                    <a href="https://share.google/E88bfXYq1hpYgriVh" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center justify-center px-6 py-3 border-2 border-black font-display font-bold uppercase tracking-widest text-sm hover:bg-black hover:text-white transition-colors duration-300">
+                        GitHub / iananci7
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 fade-in-up delay-100">
+                <div class="md:col-span-4">
+                    <h2 class="text-xl font-bold uppercase tracking-widest mt-2">Sobre Mí</h2>
+                </div>
+                <div class="md:col-span-8 text-xl md:text-2xl leading-relaxed font-light text-gray-800">
+                    <p>
+                        Soy <span class="font-semibold text-black">estudiante de Ciencia de la Computación</span>. 
+                        Me especializo en el cruce entre los fundamentos matemáticos rigurosos y el desarrollo de software aplicado. 
+                        Mi enfoque radica en el análisis algorítmico, el cálculo avanzado y la creación de arquitecturas eficientes para resolver problemas complejos de manera escalable.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <section class="mb-24 fade-in-up delay-200">
+            <div class="flex items-center mb-8 gap-4">
+                <h2 class="text-2xl font-bold uppercase tracking-widest">Educación Académica</h2>
+                <div class="flex-grow h-px bg-gray-300"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Tarjeta Curso 1 -->
+                <div class="group border border-black p-6 flex flex-col justify-between hover:bg-black hover:text-white transition-all duration-300 h-full">
+                    <div>
+                        <p class="text-xs font-mono mb-2 opacity-60 uppercase">Matemática Discreta</p>
+                        <h3 class="text-xl font-bold mb-4 font-display">Lógica</h3>
+                        <p class="text-sm opacity-80 mb-6">Docente: <br><span class="font-semibold">Ana Lucia Huerta Salinas</span></p>
+                    </div>
+                    <a href="https://www.linkedin.com/in/ana-lucia-huerta-salinas-a89600b4/" target="_blank" rel="noopener noreferrer" 
+                       class="inline-block mt-auto text-sm border-b border-black group-hover:border-white pb-1 w-max transition-colors">
+                        Ver LinkedIn →
+                    </a>
+                </div>
+
+                <!-- Tarjeta Curso 2 -->
+                <div class="group border border-black p-6 flex flex-col justify-between hover:bg-black hover:text-white transition-all duration-300 h-full">
+                    <div>
+                        <p class="text-xs font-mono mb-2 opacity-60 uppercase">Matemática Discreta</p>
+                        <h3 class="text-xl font-bold mb-4 font-display">Lógica</h3>
+                        <p class="text-sm opacity-80 mb-6">Docente: <br><span class="font-semibold">Kristel Gisselle Loayza Cruz</span></p>
+                    </div>
+                    <span class="inline-block mt-auto text-sm opacity-50 italic">Sin enlace disponible</span>
+                </div>
+
+                <!-- Tarjeta Curso 3 -->
+                <div class="group border border-black p-6 flex flex-col justify-between hover:bg-black hover:text-white transition-all duration-300 h-full">
+                    <div>
+                        <p class="text-xs font-mono mb-2 opacity-60 uppercase">Fundamentos</p>
+                        <h3 class="text-xl font-bold mb-4 font-display">Introducción a Computación</h3>
+                        <p class="text-sm opacity-80 mb-6">Docente: <br><span class="font-semibold">Ernesto Cuadros Vargas</span></p>
+                    </div>
+                    <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" rel="noopener noreferrer" 
+                       class="inline-block mt-auto text-sm border-b border-black group-hover:border-white pb-1 w-max transition-colors">
+                        Ver LinkedIn →
+                    </a>
+                </div>
+
+                <!-- Tarjeta Curso 4 -->
+                <div class="group border border-black p-6 flex flex-col justify-between hover:bg-black hover:text-white transition-all duration-300 h-full">
+                    <div>
+                        <p class="text-xs font-mono mb-2 opacity-60 uppercase">Análisis Matemático</p>
+                        <h3 class="text-xl font-bold mb-4 font-display">Cálculo Diferencial e Integral I</h3>
+                        <p class="text-sm opacity-80 mb-6">Docente: <br><span class="font-semibold">Dugan Paul Nina Ortiz</span></p>
+                    </div>
+                    <a href="https://www.linkedin.com/in/dugan-paul-nina-ortiz-ab875774/" target="_blank" rel="noopener noreferrer" 
+                       class="inline-block mt-auto text-sm border-b border-black group-hover:border-white pb-1 w-max transition-colors">
+                        Ver LinkedIn →
+                    </a>
+                </div>
+
+                <!-- Tarjeta Curso 5 -->
+                <div class="group border border-black p-6 flex flex-col justify-between hover:bg-black hover:text-white transition-all duration-300 h-full">
+                    <div>
+                        <p class="text-xs font-mono mb-2 opacity-60 uppercase">Humanidades</p>
+                        <h3 class="text-xl font-bold mb-4 font-display">Historia de Occidente</h3>
+                        <p class="text-sm opacity-80 mb-6">Docente: <br><span class="font-semibold">Renzo Moreno Cavero</span></p>
+                    </div>
+                    <span class="inline-block mt-auto text-sm opacity-50 italic">Sin enlace disponible</span>
+                </div>
+
+                <!-- Tarjeta Curso 6 -->
+                <div class="group border border-black p-6 flex flex-col justify-between hover:bg-black hover:text-white transition-all duration-300 h-full">
+                    <div>
+                        <p class="text-xs font-mono mb-2 opacity-60 uppercase">Programación Core</p>
+                        <h3 class="text-xl font-bold mb-4 font-display">Técnicas Avanzadas de Programación</h3>
+                        <p class="text-sm opacity-80 mb-6">Docente: <br><span class="font-semibold">Alex Jesus Cuadros Vargas</span></p>
+                    </div>
+                    <a href="https://www.linkedin.com/in/alex-cuadros-vargas/" target="_blank" rel="noopener noreferrer" 
+                       class="inline-block mt-auto text-sm border-b border-black group-hover:border-white pb-1 w-max transition-colors">
+                        Ver LinkedIn →
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="fade-in-up delay-300 mb-16">
+            <div class="flex items-center mb-8 gap-4">
+                <h2 class="text-2xl font-bold uppercase tracking-widest">Red de Compañeros</h2>
+                <div class="flex-grow h-px bg-gray-300"></div>
+            </div>
+            
+            <p class="text-gray-600 mb-6">Conoce los portafolios y proyectos de mis colegas de Ciencias de la Computación:</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                
+                <a href="https://leonardogaaa.github.io/Mi_pagina1/" target="_blank" rel="noopener noreferrer" class="block p-4 border border-dashed border-gray-400 hover:border-black hover:bg-gray-50 transition-colors group">
+                    <div class="flex items-center justify-between">
+                        <span class="font-medium text-sm text-gray-500 group-hover:text-black">Leonardo</span>
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-black transform group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </div>
+                </a>
+                
+                <a href="https://thepandoredxxo.github.io/Alejandro-Jacob-Valencia-Delgado-pagina-web-ICC-san-pablo/" target="_blank" rel="noopener noreferrer" class="block p-4 border border-dashed border-gray-400 hover:border-black hover:bg-gray-50 transition-colors group">
+                    <div class="flex items-center justify-between">
+                        <span class="font-medium text-sm text-gray-500 group-hover:text-black">Alejandro Jacob Valencia</span>
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-black transform group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </div>
+                </a>
+
+                <a href="https://abelcutire.github.io/" target="_blank" rel="noopener noreferrer" class="block p-4 border border-dashed border-gray-400 hover:border-black hover:bg-gray-50 transition-colors group">
+                    <div class="flex items-center justify-between">
+                        <span class="font-medium text-sm text-gray-500 group-hover:text-black">Abel Cutire</span>
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-black transform group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </div>
+                </a>
+
+                <a href="https://gabriellv1.github.io/My-first-website/" target="_blank" rel="noopener noreferrer" class="block p-4 border border-dashed border-gray-400 hover:border-black hover:bg-gray-50 transition-colors group">
+                    <div class="flex items-center justify-between">
+                        <span class="font-medium text-sm text-gray-500 group-hover:text-black">Gabriel (gabriellv1)</span>
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-black transform group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </div>
+                </a>
+
+                <a href="https://julioiluj.github.io/githubpageJulioEduardoPinoCharun/" target="_blank" rel="noopener noreferrer" class="block p-4 border border-dashed border-gray-400 hover:border-black hover:bg-gray-50 transition-colors group">
+                    <div class="flex items-center justify-between">
+                        <span class="font-medium text-sm text-gray-500 group-hover:text-black">Julio Eduardo Pino Charún</span>
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-black transform group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </div>
+                </a>
+
+                <a href="https://lolofer321.github.io/Bryan-Leopoldo-Huanatico-Mamani.github.io/" target="_blank" rel="noopener noreferrer" class="block p-4 border border-dashed border-gray-400 hover:border-black hover:bg-gray-50 transition-colors group">
+                    <div class="flex items-center justify-between">
+                        <span class="font-medium text-sm text-gray-500 group-hover:text-black">Bryan Leopoldo Huanatico</span>
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-black transform group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </div>
+                </a>
+
+                <a href="https://gabriel8742.github.io/" target="_blank" rel="noopener noreferrer" class="block p-4 border border-dashed border-gray-400 hover:border-black hover:bg-gray-50 transition-colors group">
+                    <div class="flex items-center justify-between">
+                        <span class="font-medium text-sm text-gray-500 group-hover:text-black">Gabriel (gabriel8742)</span>
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-black transform group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </div>
+                </a>
+
+                <a href="https://boretd.github.io/githubpage/" target="_blank" rel="noopener noreferrer" class="block p-4 border border-dashed border-gray-400 hover:border-black hover:bg-gray-50 transition-colors group">
+                    <div class="flex items-center justify-between">
+                        <span class="font-medium text-sm text-gray-500 group-hover:text-black">Boretd</span>
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-black transform group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </div>
+                </a>
+
+                <a href="https://xhyl3m.github.io/Melani-Naomi-Chacnama-Mendoza/" target="_blank" rel="noopener noreferrer" class="block p-4 border border-dashed border-gray-400 hover:border-black hover:bg-gray-50 transition-colors group">
+                    <div class="flex items-center justify-between">
+                        <span class="font-medium text-sm text-gray-500 group-hover:text-black">Melani Naomi Chacnama</span>
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-black transform group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </div>
+                </a>
+
+                <a href="https://gerardogutierrezcelis.github.io/GerardoDanielHenryGutierrezCelis/" target="_blank" rel="noopener noreferrer" class="block p-4 border border-dashed border-gray-400 hover:border-black hover:bg-gray-50 transition-colors group">
+                    <div class="flex items-center justify-between">
+                        <span class="font-medium text-sm text-gray-500 group-hover:text-black">Gerardo Daniel Gutiérrez</span>
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-black transform group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </div>
+                </a>
+
+                <a href="https://rodrigovelasquezb.github.io/Rodrigo-Velasquez-Bonilla/" target="_blank" rel="noopener noreferrer" class="block p-4 border border-dashed border-gray-400 hover:border-black hover:bg-gray-50 transition-colors group">
+                    <div class="flex items-center justify-between">
+                        <span class="font-medium text-sm text-gray-500 group-hover:text-black">Rodrigo Velásquez Bonilla</span>
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-black transform group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </div>
+                </a>
+
+                <a href="https://danieleduardocastillomayta.github.io/Pagina-web/" target="_blank" rel="noopener noreferrer" class="block p-4 border border-dashed border-gray-400 hover:border-black hover:bg-gray-50 transition-colors group">
+                    <div class="flex items-center justify-between">
+                        <span class="font-medium text-sm text-gray-500 group-hover:text-black">Daniel Eduardo Castillo</span>
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-black transform group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </div>
+                </a>
+
+                <a href="https://rodrigopalaciossalas.github.io/" target="_blank" rel="noopener noreferrer" class="block p-4 border border-dashed border-gray-400 hover:border-black hover:bg-gray-50 transition-colors group">
+                    <div class="flex items-center justify-between">
+                        <span class="font-medium text-sm text-gray-500 group-hover:text-black">Rodrigo Palacios Salas</span>
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-black transform group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </div>
+                </a>
+
+                <a href="https://alissonsalinasalvarez.github.io/" target="_blank" rel="noopener noreferrer" class="block p-4 border border-dashed border-gray-400 hover:border-black hover:bg-gray-50 transition-colors group">
+                    <div class="flex items-center justify-between">
+                        <span class="font-medium text-sm text-gray-500 group-hover:text-black">Alisson Salinas Alvarez</span>
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-black transform group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </div>
+                </a>
+
+                <a href="https://guns.lol/the_dereck" target="_blank" rel="noopener noreferrer" class="block p-4 border border-dashed border-gray-400 hover:border-black hover:bg-gray-50 transition-colors group">
+                    <div class="flex items-center justify-between">
+                        <span class="font-medium text-sm text-gray-500 group-hover:text-black">The Dereck</span>
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-black transform group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <footer class="mt-24 pt-8 border-t border-gray-200 text-center flex flex-col items-center">
+            <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-2">Ian Anci © 2026</p>
+            <p class="text-xs text-gray-400">Computer Science Student Portfolio</p>
+        </footer>
+
+    </main>
+</body>
+</html>
